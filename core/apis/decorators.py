@@ -20,7 +20,7 @@ def accept_payload(func):
     return wrapper
 
 
-def authenticate_principal(func):
+def validate_principal(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         p_str = request.headers.get('X-Principal')
